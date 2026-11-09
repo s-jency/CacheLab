@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cache Memory Mapping Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="topbar">
+        <div class="brand">
+            <div class="brand-icon">C</div>
+            <div>
+                <h2>CacheLab</h2>
+                <p>MEMORY MAPPING SIMULATOR</p>
+            </div>
+        </div>
+        <div class="top-label">COA MINI PROJECT</div>
+    </header>
+
+    <main class="container">
+
+        <!-- WELCOME SECTION -->
+        <section class="welcome">
+            <p class="eyebrow">
+                COMPUTER ORGANIZATION &amp; ARCHITECTURE
+            </p>
+
+            <h1>
+                Cache Memory <span>Mapping Simulator</span>
+            </h1>
+
+            <p>
+                Explore how cache memory works through interactive
+                simulations of different mapping techniques.
+            </p>
+        </section>
+
+        <!-- STEP 01: CONFIGURATION -->
+        <section class="configuration panel">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Simulation Configuration</h2>
+                    <p>Configure your memory and cache settings.</p>
+                </div>
+                <span class="step-tag">STEP 01</span>
+            </div>
+
+            <div class="input-grid">
+
+                <div class="field">
+                    <label for="cacheSize">Cache Size (Bytes)</label>
+                    <select id="cacheSize">
+                        <option value="16">16 Bytes</option>
+                        <option value="32">32 Bytes</option>
+                        <option value="64">64 Bytes</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="blockSize">Block Size (Bytes)</label>
+                    <select id="blockSize">
+                        <option value="4">4 Bytes</option>
+                        <option value="8">8 Bytes</option>
+                        <option value="16">16 Bytes</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="mapping">Mapping Technique</label>
+                    <select id="mapping">
+                        <option value="direct">Direct Mapping</option>
+                        <option value="associative">
+                            Fully Associative Mapping
+                        </option>
+                        <option value="set">
+                            Set-Associative Mapping
+                        </option>
+                    </select>
+                </div>
+
+                <div class="field" id="waysField">
+                    <label for="ways">Associativity</label>
+                    <select id="ways">
+                        <option value="2">2-Way</option>
+                        <option value="4">4-Way</option>
+                    </select>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- STEP 02: MEMORY REQUESTS -->
+        <section class="request-section panel">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Memory Access Requests</h2>
+                    <p>Enter memory addresses separated by commas.</p>
+                </div>
+                <span class="step-tag">STEP 02</span>
+            </div>
+
+            <div class="field">
+                <label for="addresses">Memory Addresses</label>
+
+                <input
+                    type="text"
+                    id="addresses"
+                    placeholder="Example: 0, 4, 8, 0, 12, 4"
+                >
+            </div>
+
+            <div class="button-group">
+
+                <button id="simulateBtn" class="primary-btn">
+                    ▶ Start Simulation
+                </button>
+
+                <button id="sampleBtn" class="secondary-btn">
+                    Load Sample
+                </button>
+
+                <button id="resetBtn" class="reset-btn">
+                    ↻ Reset
+                </button>
+
+            </div>
+
+            <p id="message" class="message" aria-live="polite"></p>
+
+        </section>
+
+        <!-- STEP 03: SIMULATION RESULTS -->
+        <section class="results-section">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Simulation Overview</h2>
+                    <p>Live results from your memory requests.</p>
+                </div>
+                <span class="step-tag">STEP 03</span>
+            </div>
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <p>Total Requests</p>
+                    <h2 id="totalRequests">0</h2>
+                </div>
+
+                <div class="stat-card hit-card">
+                    <p>Cache Hits</p>
+                    <h2 id="hits">0</h2>
+                </div>
+
+                <div class="stat-card miss-card">
+                    <p>Cache Misses</p>
+                    <h2 id="misses">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <p>Hit Ratio</p>
+                    <h2 id="hitRatio">0%</h2>
+                </div>
+
+                <div class="stat-card">
+                    <p>Miss Ratio</p>
+                    <h2 id="missRatio">0%</h2>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- STEP 04: CACHE MEMORY VISUALIZATION -->
+        <section class="cache-section panel">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Cache Memory Visualization</h2>
+                    <p>
+                        Observe how memory blocks occupy cache lines.
+                    </p>
+                </div>
+                <span class="step-tag">STEP 04</span>
+            </div>
+
+            <div class="cache-table-wrapper">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cache Line</th>
+                            <th>Valid Bit</th>
+                            <th>Memory Block</th>
+                            <th>Tag</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="cacheBody">
+                        <tr>
+                            <td colspan="5" class="empty-state">
+                                Run a simulation to view cache memory.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </section>
+
+        <!-- STEP 05: EXECUTION LOG -->
+        <section class="log-section panel">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Step-by-Step Execution</h2>
+                    <p>
+                        Track every memory access and its address breakdown.
+                    </p>
+                </div>
+                <span class="step-tag">STEP 05</span>
+            </div>
+
+            <div class="cache-table-wrapper">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Request</th>
+                            <th>Address</th>
+                            <th>Binary Address</th>
+                            <th>Memory Block</th>
+                            <th>Tag</th>
+                            <th>Index / Set</th>
+                            <th>Offset</th>
+                            <th>Cache Line / Set</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="logBody">
+                        <tr>
+                            <td colspan="9" class="empty-state">
+                                Execution details will appear here.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </section>
+
+        <!-- EXPLANATION SECTION -->
+        <section class="explanation panel">
+
+            <h2>Understanding Cache Mapping</h2>
+
+            <p>
+                Cache mapping determines how blocks from main memory
+                are placed into cache memory.
+            </p>
+
+            <div class="concept-grid">
+
+                <div>
+                    <h3>Direct Mapping</h3>
+                    <p>
+                        Each memory block maps to one fixed cache line.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Fully Associative</h3>
+                    <p>
+                        A memory block can occupy any cache line.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Set-Associative</h3>
+                    <p>
+                        A memory block maps to a set and can occupy
+                        any line within that set.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>CacheLab | Computer Organization and Architecture</p>
+        <p>Educational Simulation Project</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
