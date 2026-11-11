@@ -519,3 +519,115 @@ footer p + p {
         align-items: flex-start;
     }
 }
+/* ==========================================
+   CACHELAB - TEXT VISIBILITY IMPROVEMENTS
+========================================== */
+
+/* General text visibility */
+body {
+    color: #F8FAFF;
+    font-size: 15px;
+}
+
+.welcome > p:last-child,
+.section-heading p,
+.explanation > p {
+    color: #D0DCEC;
+    font-size: 15px;
+}
+
+/* Stronger headings */
+.welcome h1,
+.section-heading h2 {
+    color: #FFFFFF;
+    font-weight: 900;
+}
+
+/* Input labels */
+.field label {
+    color: #F1F5F9;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+/* Input text */
+select,
+input {
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* Statistics numbers */
+.stat-card h2 {
+    color: #FFFFFF;
+    font-size: 32px;
+    font-weight: 900;
+}
+
+.hit-card h2 {
+    color: #45E6B0;
+}
+
+.miss-card h2 {
+    color: #FF8490;
+}
+
+/* Statistics labels */
+.stat-card p {
+    color: #D4E0EF;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* Table headings */
+th {
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 900;
+}
+
+/* Table values and numbers */
+td {
+    color: #F1F5F9;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Binary addresses - bright cyan */
+.binary-address {
+    color: #55E6E0;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+/* Cache HIT and MISS */
+.hit {
+    color: #45E6B0;
+    font-weight: 900;
+}
+
+.miss {
+    color: #FF8490;
+    font-weight: 900;
+}
+
+/* Empty table messages */
+.empty-state {
+    color: #D0DCEC;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Concept descriptions */
+.concept-grid p {
+    color: #D0DCEC;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* Footer visibility */
+footer {
+    color: #C5D2E2;
+    font-size: 12px;
+}
