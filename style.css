@@ -1,5 +1,6 @@
 /* ==========================================
-   CACHELAB - MIDNIGHT NAVY & ELECTRIC BLUE
+   CACHELAB - ROYAL BLUE & SILVER
+   HIGH VISIBILITY CLASSROOM EDITION
 ========================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800;900&display=swap');
@@ -11,80 +12,79 @@
 }
 
 :root {
-    --background: #101827;
-    --panel: #1B2940;
-    --panel-light: #22334D;
-    --primary: #398BFF;
-    --primary-hover: #2374E5;
-    --accent: #36D6C3;
-    --text: #F1F5F9;
-    --muted: #A5B4C8;
-    --border: #344761;
-    --green: #36D6A0;
-    --red: #FF707D;
+    --background: #EEF2F7;
+    --panel: #FFFFFF;
+    --panel-light: #F5F8FC;
+    --primary: #174EA6;
+    --primary-hover: #103B80;
+    --text: #172B45;
+    --muted: #43536A;
+    --border: #C7D2E1;
+    --green: #087747;
+    --red: #C62836;
 }
 
 body {
     font-family: 'Nunito Sans', sans-serif;
     background: var(--background);
     color: var(--text);
-    line-height: 1.65;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.7;
 }
 
 /* HEADER */
 
 .topbar {
-    min-height: 78px;
-    background: #131F32;
-    border-bottom: 1px solid var(--border);
+    min-height: 82px;
+    background: #FFFFFF;
+    border-bottom: 2px solid var(--border);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 7%;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 12px rgba(23, 43, 69, 0.08);
 }
 
 .brand {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 13px;
 }
 
 .brand-icon {
-    width: 43px;
-    height: 43px;
-    background: linear-gradient(135deg, #398BFF, #36D6C3);
-    color: #ffffff;
-    border-radius: 11px;
+    width: 46px;
+    height: 46px;
+    background: var(--primary);
+    color: #FFFFFF;
+    border-radius: 10px;
     display: grid;
     place-items: center;
-    font-size: 22px;
-    font-weight: 800;
+    font-size: 23px;
+    font-weight: 900;
 }
 
 .brand h2 {
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 19px;
-    font-weight: 800;
-    letter-spacing: 0.2px;
-    color: var(--text);
+    font-size: 21px;
+    font-weight: 900;
+    color: #142D50;
 }
 
 .brand p {
-    font-size: 9px;
-    color: var(--muted);
-    letter-spacing: 1.3px;
+    font-size: 11px;
+    color: #43536A;
+    font-weight: 800;
+    letter-spacing: 1.2px;
 }
 
 .top-label {
-    border: 1px solid #315B89;
-    background: #1C3555;
-    color: #70B1FF;
-    padding: 7px 14px;
+    border: 1px solid #174EA6;
+    background: #E8F0FF;
+    color: #123D80;
+    padding: 8px 15px;
     border-radius: 7px;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
+    font-size: 12px;
+    font-weight: 900;
 }
 
 /* MAIN CONTAINER */
@@ -103,41 +103,41 @@ body {
 }
 
 .eyebrow {
-    color: var(--accent);
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 1.6px;
-    margin-bottom: 11px;
+    color: #174EA6;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
 }
 
 .welcome h1 {
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: clamp(29px, 4vw, 40px);
+    font-size: clamp(32px, 4vw, 43px);
     line-height: 1.3;
     font-weight: 900;
-    margin-bottom: 13px;
-    color: var(--text);
+    margin-bottom: 14px;
+    color: #142D50;
 }
 
 .welcome h1 span {
-    color: var(--primary);
+    color: #174EA6;
 }
 
 .welcome > p:last-child {
-    color: var(--muted);
-    max-width: 650px;
-    font-size: 14px;
+    color: #35465E;
+    max-width: 700px;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 /* PANELS */
 
 .panel {
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 13px;
-    padding: 26px;
-    margin-bottom: 25px;
-    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.15);
+    background: #FFFFFF;
+    border: 1px solid #C7D2E1;
+    border-radius: 12px;
+    padding: 27px;
+    margin-bottom: 26px;
+    box-shadow: 0 4px 14px rgba(23, 43, 69, 0.07);
 }
 
 .section-heading {
@@ -149,26 +149,26 @@ body {
 }
 
 .section-heading h2 {
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 18px;
-    font-weight: 800;
-    margin-bottom: 4px;
-    color: var(--text);
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 5px;
+    color: #142D50;
 }
 
 .section-heading p {
-    color: var(--muted);
-    font-size: 13px;
+    color: #43536A;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .step-tag {
-    background: #1D385B;
-    color: #75B6FF;
-    border: 1px solid #315B89;
+    background: #E8F0FF;
+    color: #123D80;
+    border: 1px solid #B9CDEA;
     border-radius: 6px;
-    padding: 6px 11px;
-    font-size: 10px;
-    font-weight: 700;
+    padding: 7px 12px;
+    font-size: 12px;
+    font-weight: 900;
     white-space: nowrap;
 }
 
@@ -184,42 +184,43 @@ body {
     display: flex;
     flex-direction: column;
     gap: 9px;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
 }
 
 .field label {
-    font-size: 13px;
-    font-weight: 700;
-    color: #D6E2F0;
+    font-size: 15px;
+    font-weight: 800;
+    color: #1B304C;
 }
 
 select,
 input {
     width: 100%;
-    background: #142238;
-    color: var(--text);
-    border: 1px solid #405571;
+    background: #FFFFFF;
+    color: #172B45;
+    border: 1.5px solid #AEBED1;
     border-radius: 7px;
     padding: 13px;
     font-family: 'Nunito Sans', sans-serif;
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: 700;
     outline: none;
-    transition: 0.2s;
 }
 
 select option {
-    background: #142238;
-    color: var(--text);
+    background: #FFFFFF;
+    color: #172B45;
 }
 
 select:focus,
 input:focus {
-    border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(57, 139, 255, 0.16);
+    border-color: #174EA6;
+    box-shadow: 0 0 0 3px rgba(23, 78, 166, 0.13);
 }
 
 input::placeholder {
-    color: #8292A8;
+    color: #68788D;
+    font-weight: 600;
 }
 
 /* BUTTONS */
@@ -228,57 +229,56 @@ input::placeholder {
     display: flex;
     gap: 12px;
     flex-wrap: wrap;
-    margin-top: 10px;
+    margin-top: 12px;
 }
 
 button {
-    padding: 12px 19px;
+    padding: 13px 20px;
     border-radius: 7px;
     font-family: 'Nunito Sans', sans-serif;
-    font-size: 13px;
-    font-weight: 700;
+    font-size: 14px;
+    font-weight: 900;
     cursor: pointer;
     transition: 0.2s ease;
 }
 
 .primary-btn {
-    background: var(--primary);
-    border: 1px solid var(--primary);
-    color: #ffffff;
+    background: #174EA6;
+    border: 1px solid #174EA6;
+    color: #FFFFFF;
 }
 
 .primary-btn:hover {
-    background: var(--primary-hover);
+    background: #103B80;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(57, 139, 255, 0.25);
 }
 
 .secondary-btn {
-    background: #1C3555;
-    border: 1px solid #315B89;
-    color: #83BDFF;
+    background: #E8F0FF;
+    border: 1px solid #A9C2E8;
+    color: #123D80;
 }
 
 .secondary-btn:hover {
-    background: #25466D;
+    background: #D8E6FF;
 }
 
 .reset-btn {
-    background: #26364D;
-    border: 1px solid #465A73;
-    color: #C1CCDA;
+    background: #FFFFFF;
+    border: 1px solid #9EADBF;
+    color: #35465E;
 }
 
 .reset-btn:hover {
-    background: #354861;
-    color: #ffffff;
+    background: #E8EDF4;
 }
 
 /* MESSAGE */
 
 .message {
-    margin-top: 14px;
-    font-size: 13px;
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 800;
     color: var(--red);
 }
 
@@ -289,7 +289,7 @@ button {
 /* RESULTS */
 
 .results-section {
-    margin-bottom: 25px;
+    margin-bottom: 26px;
 }
 
 .stats-grid {
@@ -299,39 +299,41 @@ button {
 }
 
 .stat-card {
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 11px;
-    padding: 22px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.13);
-    transition: 0.2s ease;
-}
-
-.stat-card:hover {
-    border-color: #398BFF;
-    transform: translateY(-3px);
+    background: #FFFFFF;
+    border: 1px solid #C7D2E1;
+    border-top: 4px solid #174EA6;
+    border-radius: 10px;
+    padding: 23px;
+    box-shadow: 0 3px 12px rgba(23, 43, 69, 0.06);
 }
 
 .stat-card p {
-    color: var(--muted);
-    font-size: 12px;
-    font-weight: 600;
+    color: #35465E;
+    font-size: 14px;
+    font-weight: 800;
 }
 
 .stat-card h2 {
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 29px;
-    font-weight: 800;
+    font-size: 34px;
+    font-weight: 900;
     margin-top: 8px;
-    color: #70B1FF;
+    color: #123D80;
+}
+
+.hit-card {
+    border-top-color: #087747;
 }
 
 .hit-card h2 {
-    color: var(--green);
+    color: #087747;
+}
+
+.miss-card {
+    border-top-color: #C62836;
 }
 
 .miss-card h2 {
-    color: var(--red);
+    color: #C62836;
 }
 
 /* TABLES */
@@ -346,68 +348,77 @@ table {
     border-collapse: collapse;
     min-width: 550px;
     text-align: left;
-    background: var(--panel);
+    background: #FFFFFF;
 }
 
 thead {
-    background: #263B58;
+    background: #173D70;
 }
 
 th {
-    padding: 15px;
-    font-size: 12px;
-    color: #9CCBFF;
-    font-weight: 800;
-    border: 1px solid var(--border);
+    padding: 16px 14px;
+    font-size: 14px;
+    color: #FFFFFF;
+    font-weight: 900;
+    border: 1px solid #173D70;
 }
 
 td {
-    padding: 14px;
-    font-size: 13px;
-    color: #D6E2F0;
-    border: 1px solid #344761;
+    padding: 15px 14px;
+    font-size: 15px;
+    color: #172B45;
+    font-weight: 700;
+    border: 1px solid #CBD5E1;
 }
 
 tbody tr:nth-child(even) {
-    background: #1D2D43;
+    background: #EAF0F7;
 }
 
 tbody tr:nth-child(odd) {
-    background: #19283D;
+    background: #FFFFFF;
 }
 
 tbody tr:hover {
-    background: #293E5A;
+    background: #DCE9FA;
 }
 
 .empty-state {
     text-align: center;
-    color: var(--muted);
+    color: #43536A;
     padding: 30px;
+    font-size: 15px;
+    font-weight: 700;
 }
 
+/* HIT AND MISS */
+
 .hit {
-    color: var(--green);
-    font-weight: 800;
+    color: #087747;
+    font-weight: 900;
 }
 
 .miss {
-    color: var(--red);
-    font-weight: 800;
+    color: #C62836;
+    font-weight: 900;
 }
 
+/* BINARY ADDRESSES */
+
 .binary-address {
-    color: #70B1FF;
+    color: #123D80;
     font-family: Consolas, monospace;
-    font-weight: 600;
+    font-size: 15px;
+    font-weight: 900;
     white-space: nowrap;
 }
 
 /* EXPLANATION */
 
 .explanation > p {
-    color: var(--muted);
-    font-size: 14px;
+    color: #35465E;
+    font-size: 15px;
+    font-weight: 600;
     margin: 10px 0 22px;
 }
 
@@ -418,64 +429,41 @@ tbody tr:hover {
 }
 
 .concept-grid div {
-    background: #192A41;
-    border: 1px solid var(--border);
-    border-radius: 9px;
-    padding: 18px;
-    transition: 0.2s ease;
-}
-
-.concept-grid div:hover {
-    border-color: var(--primary);
-    background: #203650;
+    background: #F0F4FA;
+    border: 1px solid #C7D2E1;
+    border-left: 4px solid #174EA6;
+    border-radius: 8px;
+    padding: 19px;
 }
 
 .concept-grid h3 {
-    font-family: 'Nunito Sans', sans-serif;
-    color: #70B1FF;
-    font-size: 14px;
-    font-weight: 800;
-    margin-bottom: 8px;
+    color: #123D80;
+    font-size: 16px;
+    font-weight: 900;
+    margin-bottom: 9px;
 }
 
 .concept-grid p {
-    color: #B2C0D2;
-    font-size: 12px;
+    color: #35465E;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.7;
 }
 
 /* FOOTER */
 
 footer {
-    border-top: 1px solid var(--border);
+    border-top: 1px solid #C7D2E1;
     text-align: center;
-    padding: 25px;
-    color: var(--muted);
-    font-size: 11px;
-    background: #131F32;
+    padding: 27px;
+    color: #35465E;
+    font-size: 13px;
+    font-weight: 700;
+    background: #FFFFFF;
 }
 
 footer p + p {
     margin-top: 5px;
-}
-
-/* SCROLLBAR */
-
-::-webkit-scrollbar {
-    width: 9px;
-    height: 9px;
-}
-
-::-webkit-scrollbar-track {
-    background: #101827;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #405571;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #398BFF;
 }
 
 /* RESPONSIVE DESIGN */
@@ -504,6 +492,10 @@ footer p + p {
     .panel {
         padding: 19px;
     }
+
+    .welcome h1 {
+        font-size: 32px;
+    }
 }
 
 @media (max-width: 430px) {
@@ -515,119 +507,20 @@ footer p + p {
         grid-template-columns: 1fr 1fr;
     }
 
+    .stat-card {
+        padding: 15px;
+    }
+
+    .stat-card h2 {
+        font-size: 27px;
+    }
+
     .section-heading {
         align-items: flex-start;
     }
-}
-/* ==========================================
-   CACHELAB - TEXT VISIBILITY IMPROVEMENTS
-========================================== */
 
-/* General text visibility */
-body {
-    color: #F8FAFF;
-    font-size: 15px;
-}
-
-.welcome > p:last-child,
-.section-heading p,
-.explanation > p {
-    color: #D0DCEC;
-    font-size: 15px;
-}
-
-/* Stronger headings */
-.welcome h1,
-.section-heading h2 {
-    color: #FFFFFF;
-    font-weight: 900;
-}
-
-/* Input labels */
-.field label {
-    color: #F1F5F9;
-    font-size: 14px;
-    font-weight: 800;
-}
-
-/* Input text */
-select,
-input {
-    color: #FFFFFF;
-    font-size: 15px;
-    font-weight: 600;
-}
-
-/* Statistics numbers */
-.stat-card h2 {
-    color: #FFFFFF;
-    font-size: 32px;
-    font-weight: 900;
-}
-
-.hit-card h2 {
-    color: #45E6B0;
-}
-
-.miss-card h2 {
-    color: #FF8490;
-}
-
-/* Statistics labels */
-.stat-card p {
-    color: #D4E0EF;
-    font-size: 13px;
-    font-weight: 700;
-}
-
-/* Table headings */
-th {
-    color: #FFFFFF;
-    font-size: 13px;
-    font-weight: 900;
-}
-
-/* Table values and numbers */
-td {
-    color: #F1F5F9;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-/* Binary addresses - bright cyan */
-.binary-address {
-    color: #55E6E0;
-    font-size: 14px;
-    font-weight: 800;
-}
-
-/* Cache HIT and MISS */
-.hit {
-    color: #45E6B0;
-    font-weight: 900;
-}
-
-.miss {
-    color: #FF8490;
-    font-weight: 900;
-}
-
-/* Empty table messages */
-.empty-state {
-    color: #D0DCEC;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-/* Concept descriptions */
-.concept-grid p {
-    color: #D0DCEC;
-    font-size: 13px;
-    line-height: 1.7;
-}
-
-/* Footer visibility */
-footer {
-    color: #C5D2E2;
-    font-size: 12px;
+    th,
+    td {
+        padding: 12px;
+    }
 }
