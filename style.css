@@ -1,5 +1,5 @@
 /* ==========================================
-   CACHELAB - ROYAL BLUE & SILVER
+   CACHELAB - WARM FOREST GREEN & CREAM
    HIGH VISIBILITY CLASSROOM EDITION
 ========================================== */
 
@@ -12,15 +12,17 @@
 }
 
 :root {
-    --background: #EEF2F7;
+    --background: #F6F7F2;
     --panel: #FFFFFF;
-    --panel-light: #F5F8FC;
-    --primary: #174EA6;
-    --primary-hover: #103B80;
-    --text: #172B45;
-    --muted: #43536A;
-    --border: #C7D2E1;
-    --green: #087747;
+    --panel-light: #EFF3EB;
+    --primary: #1B5E3A;
+    --primary-hover: #13442A;
+    --primary-tint: #E4F0E9;
+    --text: #16261E;
+    --heading: #12241B;
+    --muted: #42574C;
+    --border: #C8D4C9;
+    --green: #0D8A4E;
     --red: #C62836;
 }
 
@@ -37,13 +39,13 @@ body {
 
 .topbar {
     min-height: 82px;
-    background: #FFFFFF;
+    background: var(--panel);
     border-bottom: 2px solid var(--border);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 7%;
-    box-shadow: 0 3px 12px rgba(23, 43, 69, 0.08);
+    box-shadow: 0 3px 12px rgba(22, 38, 30, 0.07);
 }
 
 .brand {
@@ -67,20 +69,20 @@ body {
 .brand h2 {
     font-size: 21px;
     font-weight: 900;
-    color: #142D50;
+    color: var(--heading);
 }
 
 .brand p {
     font-size: 11px;
-    color: #43536A;
+    color: var(--muted);
     font-weight: 800;
     letter-spacing: 1.2px;
 }
 
 .top-label {
-    border: 1px solid #174EA6;
-    background: #E8F0FF;
-    color: #123D80;
+    border: 1px solid var(--primary);
+    background: var(--primary-tint);
+    color: var(--primary-hover);
     padding: 8px 15px;
     border-radius: 7px;
     font-size: 12px;
@@ -103,7 +105,7 @@ body {
 }
 
 .eyebrow {
-    color: #174EA6;
+    color: var(--primary);
     font-size: 13px;
     font-weight: 900;
     letter-spacing: 1.5px;
@@ -115,15 +117,15 @@ body {
     line-height: 1.3;
     font-weight: 900;
     margin-bottom: 14px;
-    color: #142D50;
+    color: var(--heading);
 }
 
 .welcome h1 span {
-    color: #174EA6;
+    color: var(--primary);
 }
 
 .welcome > p:last-child {
-    color: #35465E;
+    color: var(--muted);
     max-width: 700px;
     font-size: 16px;
     font-weight: 600;
@@ -132,12 +134,12 @@ body {
 /* PANELS */
 
 .panel {
-    background: #FFFFFF;
-    border: 1px solid #C7D2E1;
+    background: var(--panel);
+    border: 1px solid var(--border);
     border-radius: 12px;
     padding: 27px;
     margin-bottom: 26px;
-    box-shadow: 0 4px 14px rgba(23, 43, 69, 0.07);
+    box-shadow: 0 4px 14px rgba(22, 38, 30, 0.06);
 }
 
 .section-heading {
@@ -152,19 +154,19 @@ body {
     font-size: 20px;
     font-weight: 900;
     margin-bottom: 5px;
-    color: #142D50;
+    color: var(--heading);
 }
 
 .section-heading p {
-    color: #43536A;
+    color: var(--muted);
     font-size: 14px;
     font-weight: 600;
 }
 
 .step-tag {
-    background: #E8F0FF;
-    color: #123D80;
-    border: 1px solid #B9CDEA;
+    background: var(--primary-tint);
+    color: var(--primary-hover);
+    border: 1px solid #B5CEBE;
     border-radius: 6px;
     padding: 7px 12px;
     font-size: 12px;
@@ -190,15 +192,15 @@ body {
 .field label {
     font-size: 15px;
     font-weight: 800;
-    color: #1B304C;
+    color: var(--heading);
 }
 
 select,
 input {
     width: 100%;
     background: #FFFFFF;
-    color: #172B45;
-    border: 1.5px solid #AEBED1;
+    color: var(--text);
+    border: 1.5px solid #B0C0B2;
     border-radius: 7px;
     padding: 13px;
     font-family: 'Nunito Sans', sans-serif;
@@ -209,17 +211,17 @@ input {
 
 select option {
     background: #FFFFFF;
-    color: #172B45;
+    color: var(--text);
 }
 
 select:focus,
 input:focus {
-    border-color: #174EA6;
-    box-shadow: 0 0 0 3px rgba(23, 78, 166, 0.13);
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(27, 94, 58, 0.14);
 }
 
 input::placeholder {
-    color: #68788D;
+    color: #6B7E72;
     font-weight: 600;
 }
 
@@ -243,34 +245,34 @@ button {
 }
 
 .primary-btn {
-    background: #174EA6;
-    border: 1px solid #174EA6;
+    background: var(--primary);
+    border: 1px solid var(--primary);
     color: #FFFFFF;
 }
 
 .primary-btn:hover {
-    background: #103B80;
+    background: var(--primary-hover);
     transform: translateY(-2px);
 }
 
 .secondary-btn {
-    background: #E8F0FF;
-    border: 1px solid #A9C2E8;
-    color: #123D80;
+    background: var(--primary-tint);
+    border: 1px solid #A8C7B4;
+    color: var(--primary-hover);
 }
 
 .secondary-btn:hover {
-    background: #D8E6FF;
+    background: #D4E8DC;
 }
 
 .reset-btn {
     background: #FFFFFF;
-    border: 1px solid #9EADBF;
-    color: #35465E;
+    border: 1px solid #A3B3A5;
+    color: var(--muted);
 }
 
 .reset-btn:hover {
-    background: #E8EDF4;
+    background: #EDF1EA;
 }
 
 /* MESSAGE */
@@ -299,16 +301,16 @@ button {
 }
 
 .stat-card {
-    background: #FFFFFF;
-    border: 1px solid #C7D2E1;
-    border-top: 4px solid #174EA6;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--primary);
     border-radius: 10px;
     padding: 23px;
-    box-shadow: 0 3px 12px rgba(23, 43, 69, 0.06);
+    box-shadow: 0 3px 12px rgba(22, 38, 30, 0.06);
 }
 
 .stat-card p {
-    color: #35465E;
+    color: var(--muted);
     font-size: 14px;
     font-weight: 800;
 }
@@ -317,23 +319,23 @@ button {
     font-size: 34px;
     font-weight: 900;
     margin-top: 8px;
-    color: #123D80;
+    color: var(--primary-hover);
 }
 
 .hit-card {
-    border-top-color: #087747;
+    border-top-color: var(--green);
 }
 
 .hit-card h2 {
-    color: #087747;
+    color: var(--green);
 }
 
 .miss-card {
-    border-top-color: #C62836;
+    border-top-color: var(--red);
 }
 
 .miss-card h2 {
-    color: #C62836;
+    color: var(--red);
 }
 
 /* TABLES */
@@ -352,7 +354,7 @@ table {
 }
 
 thead {
-    background: #173D70;
+    background: #17492E;
 }
 
 th {
@@ -360,19 +362,19 @@ th {
     font-size: 14px;
     color: #FFFFFF;
     font-weight: 900;
-    border: 1px solid #173D70;
+    border: 1px solid #17492E;
 }
 
 td {
     padding: 15px 14px;
     font-size: 15px;
-    color: #172B45;
+    color: var(--text);
     font-weight: 700;
-    border: 1px solid #CBD5E1;
+    border: 1px solid #CBD6CC;
 }
 
 tbody tr:nth-child(even) {
-    background: #EAF0F7;
+    background: #EFF3EB;
 }
 
 tbody tr:nth-child(odd) {
@@ -380,12 +382,12 @@ tbody tr:nth-child(odd) {
 }
 
 tbody tr:hover {
-    background: #DCE9FA;
+    background: #DFECE2;
 }
 
 .empty-state {
     text-align: center;
-    color: #43536A;
+    color: var(--muted);
     padding: 30px;
     font-size: 15px;
     font-weight: 700;
@@ -394,19 +396,19 @@ tbody tr:hover {
 /* HIT AND MISS */
 
 .hit {
-    color: #087747;
+    color: var(--green);
     font-weight: 900;
 }
 
 .miss {
-    color: #C62836;
+    color: var(--red);
     font-weight: 900;
 }
 
 /* BINARY ADDRESSES */
 
 .binary-address {
-    color: #123D80;
+    color: var(--primary-hover);
     font-family: Consolas, monospace;
     font-size: 15px;
     font-weight: 900;
@@ -416,7 +418,7 @@ tbody tr:hover {
 /* EXPLANATION */
 
 .explanation > p {
-    color: #35465E;
+    color: var(--muted);
     font-size: 15px;
     font-weight: 600;
     margin: 10px 0 22px;
@@ -429,22 +431,22 @@ tbody tr:hover {
 }
 
 .concept-grid div {
-    background: #F0F4FA;
-    border: 1px solid #C7D2E1;
-    border-left: 4px solid #174EA6;
+    background: var(--panel-light);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--primary);
     border-radius: 8px;
     padding: 19px;
 }
 
 .concept-grid h3 {
-    color: #123D80;
+    color: var(--primary-hover);
     font-size: 16px;
     font-weight: 900;
     margin-bottom: 9px;
 }
 
 .concept-grid p {
-    color: #35465E;
+    color: var(--muted);
     font-size: 14px;
     font-weight: 600;
     line-height: 1.7;
@@ -453,13 +455,13 @@ tbody tr:hover {
 /* FOOTER */
 
 footer {
-    border-top: 1px solid #C7D2E1;
+    border-top: 1px solid var(--border);
     text-align: center;
     padding: 27px;
-    color: #35465E;
+    color: var(--muted);
     font-size: 13px;
     font-weight: 700;
-    background: #FFFFFF;
+    background: var(--panel);
 }
 
 footer p + p {
